@@ -161,7 +161,7 @@ class SeraphicKnight(character):
         spells = (("Valor", 20, 10), ("Holy Fire", 30, 20), ("Greater Light", 40, 30))
         specials = (("God Flash", 100, 20), ("Sixfold Slash of Light", 30, 8), ("Heavenly Aura", 50, 15)) 
         buffs = (("Uriel", 100, 50, "Heal"), ("Greater Spirit Boost", 30, 30, "Mana"), ("Spirit Boost", 20, 20, "Mana"))
-        super().__init__("Seraphic Knight", 400, 200, 4, spells, specials, buffs, 1000)
+        super().__init__("Seraphic Knight", 400, 200, 4, spells, specials, buffs, 1800)
 
 class ShrubParasite(character):
     def __init__(self):
@@ -175,10 +175,31 @@ class WaterGuardian(character):
     def __init__(self):
         spells = (("Repel Undeath", 20, 10), ("Monsoon", 50, 30), ("Open Wounds", 30, 20))
         specials = (("Shark Cyclone", 80, 15), ("Tsunami", 100, 20))
-        buffs = (("Ocean Ruler", 100, 40, "Mana"), ("Calm Waves", 15, 10, "Heal"), ("Tidal Surge", 1, 30, "MultM"))
-        super().__init__("Water Guardian", 500, 150, 0, spells, specials, buffs, 1500)
+        buffs = (("Ocean Ruler", 100, 40, "Mana"), ("Calm Waves", 15, 10, "Heal"), ("Tidal Surge", 1, 15, "MultM"))
+        super().__init__("Water Guardian", 350, 150, 0, spells, specials, buffs, 1500)
+
+class EliteGunman(character):
+    def __init__(self):
+        spells = (("Twin Rifle Assault", 15, 8), ("Gale Acceleration", 30, 16), ("Vertical Strike", 40, 25))
+        specials = (("High Vertical Strike", 50, 10), ("Overdrive!", 90, 20), ("Thunderball", 30, 6))
+        buffs = (("Physical Boost", 2, 30, "MultM"), ("Strengthen Perception", 3, 40, "MultM"), ("Flow Acceleration", 30, 15, "Mana"))
+        super().__init__("Elite Gunman", 400, 200, 8, spells, specials, buffs, 2500)
+
+class GoldenHydra(character):
+    def __init__(self):
+        spells = (("Continual Light", 30, 15), ("Turn Undead", 40, 20), ("True Light", 20, 10))
+        specials = (("God Flash", 100, 20), ("Vision Of The Oracle", 70, 12))
+        buffs = (("1st Head Heal", 50, 20, "Heal"), ("2nd Head Mana", 50, 30, "Mana"), ("3rd Head Multiplier", 8, 150, "MultH"))
+        super().__init__("Golden Hydra", 450, 150, 6, spells, specials, buffs, 4000)
+
+class FesteringHydra(character):
+    def __init__(self):
+        spells = (("Petrification", 30, 15), ("Gravity Maelstrom", 60, 30), ("Dance Of Death", 70, 40))
+        specials = (("Mantle Of Chaos", 80, 15), ("Thousand Bone Lance", 90, 20))
+        buffs = (("Skeletal Wall", 40, 20, "Heal"), ("False Data: Mana", 40, 20, "Mana"), ("Dark Vision", 2, 45, "MultM"))
+        super().__init__("Festering Hydra", 350, 130, 5, spells, specials, buffs, 3000)
 
 chars=[Barbarian, Elf, Knight, Wizard, LichDragon, Manticore, WaterGuardian, ShrubParasite, SeraphicKnight, SentryBot,
        PyroHarvester, PlagueRogue, ObsidianGolem, Necromancer, Mercenary, LampStalker, HeroKing, HauntedLog, DreamWyrm,
-       CyanSpellcaster, ChaoticShambler, CrimsonDrake]
+       CyanSpellcaster, ChaoticShambler, CrimsonDrake, EliteGunman, FesteringHydra, GoldenHydra]
 image_chars=[char() for char in chars]
